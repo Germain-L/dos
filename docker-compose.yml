@@ -1,0 +1,10 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+
+  dos:
+    build: ./dos
+    depends_on:
+      - server
